@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>tiles.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+tiles.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">pygame</span>
+
+
+<span class="s0">class </span><span class="s1">Tile(pygame.sprite.Sprite):</span>
+    <span class="s0">def </span><span class="s1">__init__(self</span><span class="s0">, </span><span class="s1">pos</span><span class="s0">, </span><span class="s1">size):  </span><span class="s2"># To tell position and size each tile</span>
+        <span class="s1">super().__init__()</span>
+
+        <span class="s2"># Draws the tiles and what they look like</span>
+        <span class="s1">self.image = pygame.Surface((size</span><span class="s0">, </span><span class="s1">size))</span>
+        <span class="s1">self.image.fill(</span><span class="s3">&quot;grey&quot;</span><span class="s1">)</span>
+        <span class="s1">self.rect = self.image.get_rect(topleft=pos)</span>
+
+    <span class="s0">def </span><span class="s1">update(self</span><span class="s0">, </span><span class="s1">x_shift):  </span><span class="s2"># how much shift screen left or right</span>
+        <span class="s1">self.rect.x += x_shift  </span><span class="s2"># when we call the function, the value in the brackets will = x_shift since self doesn't</span>
+</pre>
+</body>
+</html>
